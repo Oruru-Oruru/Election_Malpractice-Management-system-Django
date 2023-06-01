@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Evidence</title>
+<style>
+    form{
+        height:50%;
+        background:rgba(0,0,0,0.09);
+        border-radius: 10px;
+        padding:20px;
+
+    }
+    .container{
+        height:100vh;
+        width:100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:1px solid black;
+    }
+
+    input, select{
+        display:block;
+        margin:10px 0px;
+        width:200px;
+        border-radius: 5px;
+        height: 30px;
+        
+    }
+
+    button{
+        margin:15px 0px;
+        width:200px;
+        border-radius: 20px;
+        cursor:pointer;
+        background:pink;
+        color:blue;
+        text-align: center;
+        padding:10px 20px;
+        
+    }
+
+
+    label{
+        display:block;
+        font-size: 20px;
+
+    }
+
+
+</style>
+</head>
+<body style="background-color: blue;">
+    <div class="container">
+        <form action="" method="POST" style="color: white;" enctype="multipart/form-data">
+            <marquee behavior="" direction="left" style="color: white;"> <h2>Please Give The Evidence Where Malpractice Occured</h2></marquee>
+            {% csrf_token %}
+            {%if form.errors%}
+            {{form.errors}}
+            {%endif%}
+            {{form.as_p}}
+            <button class="btn btn-primary" type="submit" >Save Changes</button>
+        
+            <button><a href="/category" style="color: blue;">Back</a></button>
+            <button><a href="/thanks" style="color: blue">Next</a></button>
+            </form>
+    </div>
+
+
+</form>
+</body>
+</html>

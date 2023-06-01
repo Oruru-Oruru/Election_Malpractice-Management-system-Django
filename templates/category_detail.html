@@ -1,0 +1,64 @@
+<<html>
+    <head>
+        
+    <title>Thanks</title>
+    <style>
+        
+        
+        button{
+            margin:15px 0px;
+            width:200px;
+            border-radius: 20px;
+            align-content: center;
+            cursor:pointer;
+            align-items: center;
+            background:pink;
+            color: blue;
+            text-align: center;
+            padding:10px 20px;
+            
+        }
+    
+    
+        label{
+            display:block;
+            font-size: 20px;
+    
+        }
+    
+    
+    </style>
+    </head>
+    <body style="background-color: pink;">
+        
+        
+        <div class="container">
+            
+            
+            
+            <h1>Details of Category{{category.id}}, {{category.category_name}} </h1>
+
+            <p>
+                {{category.category_description}}
+            </p>
+
+            <img alt="Qries" src="{{category.category_photo.url}}">
+            
+
+
+                
+            
+                <button><a href="/category" style="color: blue;">Back</a></button>
+                <button><a href="/location" style="color: blue">Next</a></button>
+               
+        </div>
+    
+    
+    </form>
+    </body>
+    </html>
+
+
+
+
+

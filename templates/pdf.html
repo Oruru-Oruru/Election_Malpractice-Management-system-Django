@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        table{
+            font-family: arial, san-serif;
+            border-collapse: collapse;
+            width: 100;
+        }
+        td, th{
+            border: 1px splid #dddddd;
+            text-align: left;
+            padding:8px
+        }
+        tr:nth-child(even){
+            background-color: #dddddd;
+        }
+    </style>
+    </head>
+    <body>
+        <h2 style="text-align: center; color: blue;">SYSTEM REPORT </h2>
+        <table>
+            <tr>
+                <th>Name of the User</th>
+                <th>Category of malpractice</th>
+                <th>Evidence</th>
+                <th>Location</th>
+                
+            </tr>
+            {%for x in data%}
+            <tr>
+              <td>{{x.name}}</td>
+              <td>{{x.category}}</td>
+              <td><img src=http://127.0.0.1:8000/media/{{x.evidence}}/></td>
+              <td>{{x.location}}</td>
+            </tr>
+            {%endfor%}
+           
+        </table>
+    </body>
+</html>

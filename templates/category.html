@@ -1,0 +1,35 @@
+
+{% extends "base.html" %}
+
+{% block content %}      
+
+<html>
+<head>
+<title>Categories </title>
+
+</head>
+
+<body style="background-color: pink;">
+    
+    <marquee behavior="" direction="left" style="color: white;"><h1 style="color: white;">Click On the Category of Multpractice </h1></marquee>
+
+{% for Category in categorie %}
+<div class="card" style="size: 80px;">
+    <a href="/category/{{Category.id}}" style="size: 90px;">
+    <div class="card-body text-center" style="size: 90px;">
+        <h5 class="card-title" style="color: blue;">{{Category.category_name}} </h5>
+        
+        <a href="/category/{{Category.id}}">
+        
+            <img alt="Qries" src="{{Category.category_photo.url}}"
+            width=70" height="70" style="size: 60px;">
+        </a>
+        
+    </div>
+</a>
+</div>
+{%endfor%}
+</body>
+
+</html>
+{% endblock %}

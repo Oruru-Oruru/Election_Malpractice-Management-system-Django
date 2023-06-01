@@ -1,0 +1,75 @@
+<html>
+<head>
+    
+<title>Location</title>
+<style>
+    form{
+        height:50%;
+        background:(rgb(112, 188, 6));
+        border-radius: 10px;
+        padding:20px;
+
+    }
+    .container{
+        height:100vh;
+        width:100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:1px solid black;
+    }
+
+    input, select{
+        display:block;
+        margin:10px 0px;
+        width:200px;
+        border-radius: 5px;
+        height: 30px;
+        
+    }
+
+    button{
+        margin:15px 0px;
+        width:200px;
+        border-radius: 20px;
+        cursor:pointer;
+        background:pink;
+        color: blue;
+        text-align: center;
+        padding:10px 20px;
+        
+    }
+
+
+    label{
+        display:block;
+        font-size: 20px;
+
+    }
+
+
+</style>
+</head>
+<body style="background-color: blue;">
+    
+    
+    <div class="container">
+        
+        
+        <form action="" method="POST" style="color: white;">
+            <marquee behavior="" direction="left" style="color: white;"> <h2>Please Fill In The Specific Location Malpractice Occured.</h2></marquee>
+            
+            {% csrf_token %}
+            {{form.as_p}}
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.586415635577!2d34.52044811415767!3d0.6177573995493177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1781d7406e0bee99%3A0xf0862b2a391c4314!2sKibabii%20University!5e0!3m2!1sen!2ske!4v1677162461655!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <button class="btn btn-primary" type="submit" >Save Changes</button>
+        
+            <button><a href="/category" style="color: blue;">Back</a></button>
+            <button><a href="/evidence" style="color: blue">Next</a></button>
+           </form>
+    </div>
+
+
+</form>
+</body>
+</html>
